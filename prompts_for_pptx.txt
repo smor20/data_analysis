@@ -1,0 +1,1 @@
+how to add a stacked column chart having legends, title, data labels in ppt using python pptx.
