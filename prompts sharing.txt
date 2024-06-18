@@ -1,0 +1,3 @@
+i want to write the code for animation of the euler tree for a recursion program. what will be the bset python library or combination of libraries to achieve this.
+
+https://chatgpt.com/share/2c7957ae-1975-45ec-a02c-26bd6ffba4e5
