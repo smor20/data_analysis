@@ -1,3 +1,38 @@
 i want to write the code for animation of the euler tree for a recursion program. what will be the bset python library or combination of libraries to achieve this.
 
 https://chatgpt.com/share/2c7957ae-1975-45ec-a02c-26bd6ffba4e5
+
+#-------------------------------------------------------
+def gmp(sr,sc,dr,dc):
+    if sr==dr and sc==dc:
+        return ['']
+    # base case
+
+    all_paths=[]
+    for hj in range(1,(dc-sc)+1):
+        hpaths = gmp(sr,sc+hj, dr,dc)
+        for hp in hpaths:
+            # print(hj)
+            all_paths.append('h'+str(hj)+hp)
+
+    for vj in range(1,(dr-sr)+1):
+        vpaths = gmp(sr+vj,sc, dr,dc)
+        for vp in vpaths:
+            all_paths.append('v'+str(vj)+vp)
+
+    dj=1
+    while dj<=(dr-sc) and dj<=(dc-sc):
+    # for dj in range(1,4):
+        dpaths = gmp(sr+dj,sc+dj, dr,dc)
+        dj+=1
+        for dp in dpaths:
+                all_paths.append('d'+str(dj)+dp)
+
+    return all_paths
+
+
+print(gmp(1,1,3,3)) draw euler tree for this.
+
+https://chatgpt.com/share/6655ba2b-34fa-4a27-807d-a829c2feaa81
+#-------------------------------------------------------
+#-------------------------------------------------------
